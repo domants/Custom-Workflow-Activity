@@ -1,0 +1,17 @@
+Creating a plugin:
+
+-Open Microsoft Visual Studio
+-Create new project
+-Search for "class library(.net framework)" make sure it is C# not a Visual Basic then select on that and click Next.
+-->Enter Project name
+-->Tick "Place solution and project in the same directory"
+-->Select ".Net Framework 4.7.1" for most compatibility. One of the most compatible frameworks right now.
+
+-Make sure your class is in public access modifier to be able to read when registering the plugin.
+-Install the assembly packages. 
+-Go to. Tool > Nuget Package Manager > Manage Nuget Packages for Solution > click on Browse tab > Search for microsoft.crm then select for "Microsoft.CrmSdk.CoreAssemblies" and "Microsoft.CrmSdk.Workflow" then install it.
+
+-Inerit the interface of 'CodeActivity' to your class
+-After you code create your custom code.
+-Build solution by right clicking on the right pane of your solution then click build solution
+-open XrmToolBox then open tool Plugin Registration or plugin registration tool
