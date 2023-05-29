@@ -1,0 +1,73 @@
+ ----------------------------------------------------------------------------------When to use plugin and workflow----------------------------------------------------------------------------------
+You should use a plugin when you need to perform complex business logic or interact with external systems, and a custom workflow when you need to automate a series of simple or complex steps in a business process. However, it's important to consider the specific requirements of your business process and choose the option that best meets those needs.
+
+
+------------------------------------------------------------------------------------------------Plugin-----------------------------------------------------------------------------------------------------------
+-Plugins are best used when you need to perform complex business logic that requires custom code.
+-Plugins are also a good choice when you need to interact with external systems or services, or perform calculations or data validation that cannot be achieved using out-of-the-box Dynamics 365 functionality.
+-Plugins are executed synchronously, meaning that they run in real-time and can block the user interface until the plugin execution completes. This can be useful when you need to ensure that certain actions are completed before the user continues with their work.
+
+------------------------------------------------------------------------------------------------Custom Workflow-----------------------------------------------------------------------------------------------------------
+-Custom workflows are a good choice when you need to automate a series of simple or complex steps in a business process, without requiring custom code.
+-Custom workflows are executed asynchronously, meaning that they run in the background and do not block the user interface. This can be useful when you need to perform long-running operations or when the workflow may take some time to complete.
+-Custom workflows can also be triggered by a variety of events, such as record creation or update, or a specific date or time.
+
+
+-------------------------------------------------------------------------------------Plugin vs Custom Workflow-----------------------------------------------------------------------------------------------
+Plugins are custom code that run in response to an event, while workflows are a series of predefined steps that run in response to a record being created or updated. Both plugins and custom workflows are powerful tools for extending the functionality of Dynamics 365 and can be used to automate business processes and improve productivity.
+
+
+
+-------------------------------------------------------------------------------------Custom Connectors-----------------------------------------------------------------------------------------------
+-Custom connectors in Dynamics 365 offer a way to seamlessly integrate external systems or services, extending the capabilities of your Dynamics 365 environment and enabling automation of complex business processes that involve data exchange with external systems.
+
+Here are some key points about custom connectors in Dynamics 365:
+1. Integration with external systems: A custom connector enables you to connect and interact with external systems, such as third-party applications, services, or APIs. It allows you to establish a connection and securely exchange data between Dynamics 365 and the external system.
+
+2. Simplified integration: Custom connectors provide a way to simplify the integration process by abstracting the complexity of working directly with APIs. They offer a user-friendly interface to define the connection parameters, authentication details, and available actions or operations.
+
+3. Custom actions and triggers: With custom connectors, you can define custom actions or triggers that can be used in workflows, Power Automate flows, or other automation processes within Dynamics 365. This allows you to extend the functionality of Dynamics 365 and automate complex business processes involving external systems.
+
+4. Authentication and security: Custom connectors support various authentication methods to ensure secure communication between Dynamics 365 and the external system. Common authentication mechanisms include OAuth, API keys, or custom authentication methods specific to the external system.
+
+5. Customizable configurations: Custom connectors provide configuration options to define the inputs, outputs, and parameters required for interacting with the external system. This allows you to tailor the connector to match the specific requirements of your integration scenario.
+
+-------------------------------------------------------------------------------------High level design of custom connector-------------------------------------------------------------------------------------
+1. Filling the General Information Tab
+In the General section, you can upload the icon, apply background color to the icon, and give a description of your connector.
+
+Select scheme as HTTPS since our endpoint is of https
+
+
+2. Defining security sections
+
+3. Defining an action for our custom connector
+
+4. Testing the connector
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
