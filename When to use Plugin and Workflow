@@ -33,18 +33,22 @@ Here are some key points about custom connectors in Dynamics 365:
 5. Customizable configurations: Custom connectors provide configuration options to define the inputs, outputs, and parameters required for interacting with the external system. This allows you to tailor the connector to match the specific requirements of your integration scenario.
 
 -------------------------------------------------------------------------------------High level design of custom connector-------------------------------------------------------------------------------------
-1. Filling the General Information Tab
-In the General section, you can upload the icon, apply background color to the icon, and give a description of your connector.
+1. General Information Tab
+-used to provide general information about the connector.
+-used to provide basic information about the connector. This information can be used by users to identify and understand the connector.
 
-Select scheme as HTTPS since our endpoint is of https
+2. Security Tab
+-used to define the security requirements for the connector.
+-used to define how users will be able to authenticate with the connector.
 
+3. Definition Tab
+-used to define the actions, triggers, and references that are available in the connector
+-used to define the behavior of the custom connector.
 
-2. Defining security sections
+4. Code Tab
 
-3. Defining an action for our custom connector
-
-4. Testing the connector
-
+5. Test Tab
+-uses for testing your custom connector.
 
 
 
