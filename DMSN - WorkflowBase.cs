@@ -1,5 +1,5 @@
-using Microsoft.Xrm.Sdk;
 using Microsoft.Xrm.Sdk.Workflow;
+using Microsoft.Xrm.Sdk;
 using System;
 using System.Activities;
 
@@ -16,7 +16,7 @@ namespace DMSN.Plugin.Workflow
 
             try
             {
-                Execute(workflowContext, service, tracingService);
+                Execute(executionContext, service, tracingService);
             }
             catch (Exception ex)
             {
@@ -25,6 +25,6 @@ namespace DMSN.Plugin.Workflow
             }
         }
 
-        public abstract void Execute(IWorkflowContext context, IOrganizationService service, ITracingService tracingService);
+        public abstract void Execute(CodeActivityContext context, IOrganizationService service, ITracingService tracingService);
     }
 }
