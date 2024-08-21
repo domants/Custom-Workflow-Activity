@@ -64,60 +64,6 @@ namespace DMSN.Plugin
                 throw new InvalidPluginExecutionException($"An error occurred: {ex.Message}");
             }
         }
-
-        /*
-        protected override void Execute(CodeActivityContext context)
-        {
-            
-            //below code is for web services (performs data operations) 
-            IWorkflowContext workflowContext = context.GetExtension<IWorkflowContext>();
-            IOrganizationServiceFactory serviceFactory = context.GetExtension<IOrganizationServiceFactory>();
-            IOrganizationService service = serviceFactory.CreateOrganizationService(workflowContext.InitiatingUserId);
-            //Create the tracing service
-            ITracingService tracingService = context.GetExtension<ITracingService>();
-
-            try
-            {
-                tracingService.Trace("Tracing Started...");
-
-                // Retrieve the input parameters using 'context'
-                Guid AccountId = Account.Get(context).Id;
-                tracingService.Trace($"Account ID: {AccountId}");
-                ColumnSet columnSet = new ColumnSet("fax", "telephone1", "address1_line1", "address1_city", "address1_stateorprovince", "address1_postalcode", "address1_country");
-                Entity accountEntity = service.Retrieve("account", AccountId, columnSet);
-                var fax = accountEntity.GetAttributeValue<string>("fax");
-                var telephone = accountEntity.GetAttributeValue<string>("telephone1");
-                var address1_line1 = accountEntity.GetAttributeValue<string>("address1_line1");
-                var address1_city = accountEntity.GetAttributeValue<string>("address1_city");
-                var address1_stateorprovince = accountEntity.GetAttributeValue<string>("address1_stateorprovince");
-                var address1_postalcode = accountEntity.GetAttributeValue<string>("address1_postalcode");
-                var address1_country = accountEntity.GetAttributeValue<string>("address1_country");
-
-                tracingService.Trace($"Account Fax: {fax.ToString()}");
-
-                //Populate contact record
-                Guid contactId = Contact.Get(context).Id;
-                Entity contactRecord = new Entity("contact");  //Instantiate new contact record
-                contactRecord.Id = contactId;
-                contactRecord["fax"] = fax;
-                contactRecord["telephone1"] = telephone;
-                contactRecord["address1_line1"] = address1_line1;
-                contactRecord["address1_city"] = address1_city;
-                contactRecord["address1_stateorprovince"] = address1_stateorprovince;
-                contactRecord["address1_postalcode"] = address1_postalcode;
-                contactRecord["address1_country"] = address1_country;
-
-                tracingService.Trace($"Contact populated...");
-                service.Update(contactRecord);
-                
-            }
-            catch (Exception ex)
-            {
-                // Throw an error message to be displayed to the user
-                throw new InvalidPluginExecutionException($"An error occurred: {ex.Message}");
-            }
-        }
-        */
     }
 
 }
